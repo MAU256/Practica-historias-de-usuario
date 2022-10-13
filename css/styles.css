@@ -1,0 +1,835 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background-image: url('../img/fondo.jpg'), linear-gradient(rgb(219, 166, 166), rgb(0, 0, 172));;
+    background-attachment: fixed;
+    background-repeat: none;
+    background-origin: content-box;
+    background-size:cover;
+    color: white;
+    
+}
+body::-webkit-scrollbar{
+    -webkit-appearance: none;
+}
+body::-webkit-scrollbar:vertical {
+    width:12px;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: #440202;
+    border-radius: 15px;
+    border: 2px solid #490000;
+}
+body::-webkit-scrollbar-track {
+    background: #0e0d0d;
+    border-radius: 4px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+button{
+    text-decoration:none;
+}
+/*****************************INICIO INICIO*************************/
+#footer{    
+    width: auto;
+    height: 300px;
+    padding-top: 10px;
+    background-color: black;
+    text-align: center;
+}
+
+#footer .botones-proyecto{  
+    display:flex;
+    justify-content: center;
+    column-gap: 100px;
+    margin: 150px auto;    
+    margin-right: 100px;
+    margin-left: 20px;                    
+    transition: all 300ms;       
+}
+
+
+#footer .btn-footer-proyecto button{
+    background:transparent;
+    outline: none;
+    border: none;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: white;        
+    cursor: pointer;
+    transition: all 300ms;  
+}
+
+
+#footer .btn-footer-proyecto:hover button{
+    transform: scale(1.2,1.2);
+    border-bottom: 1px solid white;
+}
+
+#footer .btn-opciones{    
+    display: flex;
+    position: absolute;    
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 200px;
+    justify-content: center;        
+    column-gap: 8%;
+    top: 25%;    
+    left: 35%;
+    transition: all 300ms;
+    display: none;
+    opacity: 0;
+       
+}
+#footer .btn-opciones button{        
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 15px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 300ms;
+}
+#footer .btn-opciones button:hover{
+    color: rgb(137, 212, 255);   
+    text-shadow: 1px 1px 20px rgb(1, 127, 245);
+    border-bottom: 1px solid rgb(5, 180, 255);
+}
+
+#footer .btn-historiaOpciones{    
+    display: flex;
+    position: absolute;    
+    flex-direction: row;
+    flex-wrap: wrap;    
+    width: 400px;
+    justify-content: center;    
+    top: 19%;    
+    left: 65%;
+    transition: all 300ms;          
+    display: none;
+    opacity: 0;
+}
+
+#footer .btn-historiaOpciones button{        
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 15px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 300ms;
+}
+#footer .btn-historiaOpciones button:hover{
+    color: rgb(137, 212, 255);   
+    text-shadow: 1px 1px 20px rgb(1, 127, 245);
+    border-bottom: 1px solid rgb(5, 180, 255);
+}
+/*****************************INICIO SECTION*************************/
+
+/*****************************INICIO NUEVO PROYECTO*************************/
+#ini#inicio-container{
+    position: relative;
+}
+#inicio-container #div-crearProyecto{
+    position: absolute;
+    display: none;
+    width: 600px;
+    height: 700px;
+    left: 30%;
+    top: -40%;    
+    background:trnasparent;
+    font-size:20px;
+    padding: 40px;
+    margin-bottom: 40px;
+    opacity: 0;
+    transition: all 300ms;
+    
+    
+}
+#inicio-container #div-crearProyecto #form-crearProyecto{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;   
+    align-items:center;
+    width: 100%;
+    height: 100%;
+    row-gap: 20px;
+    background:transparent;   
+}
+#inicio-container #div-crearProyecto #form-crearProyecto input[type="text"],textarea{
+    width: 600px;
+    outline: none;
+    border: none;
+    border-radius: 8px;    
+    background-color: #ccc;
+    color: rgb(63, 104, 104);    
+    font-size: 18px;
+}
+#inicio-container #div-crearProyecto #form-crearProyecto input[type="text"]{
+    height: 20px;    
+}
+#inicio-container #div-crearProyecto #form-crearProyecto textarea{
+    height: 160px;    
+}
+#inicio-container #div-crearProyecto #form-crearProyecto #btn-crearProyecto{
+    background: none;
+    border: none;
+    outline: none;
+    color: rgb(182, 3, 3);
+    cursor: pointer;    
+    text-transform: uppercase;
+    font-size: 20px;
+    position: absolute;
+    line-height: 15px;
+    z-index:2;
+    transition: all 300ms;    
+}
+#div-btn-crearProyecto{
+    width: 190px;
+    height: 15px;
+    padding: 10px;
+    border-radius: 15px; 
+    position: relative;
+    overflow: hidden;       
+}
+#div-efecto-btnCrear{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 80px;    
+    top: 50px;
+    background: rgb(170, 242, 255);
+    border-radius: 100%;    
+    z-index:1;
+    transition: 400ms;
+    cursor: pointer;
+    
+}
+
+#div-btn-crearProyecto:hover #div-efecto-btnCrear{
+    transform: scale(6,6);
+}
+
+
+/*****************************FIN NUEVO PROYECTO*************************/
+
+
+/*****************************INICIO PROYECTOS*************************/
+#inicio-container #div-proyectos-vinculados{
+    display: flex;   
+    position: absolute;           
+    top: -70%;     
+    left: 7%;
+    width: 80%;        
+    margin: 40px auto;
+    padding: 50px;
+    flex-wrap: wrap;    
+    row-gap: 50px;
+    column-gap: 50px;    
+    transition: all 300ms;
+    display: none;
+    
+}
+#div-proyectos-vinculados .div-proyecto{
+    width: 20%;
+    border-radius: 20px;
+    padding: 15px;
+    background: rgba(165, 165, 165, 0.3);
+    backdrop-filter: blur(.7px);    
+    overflow: hidden;
+    transition: all 300ms;
+}
+.icon-basura{
+    font-size: 18px;
+    position: absolute;
+    color: white;
+    right: 15px;
+    cursor: pointer;
+    transition: all 300ms;    
+}
+.icon-basura:hover{
+    color: rgb(211, 3, 3);   
+}
+.span-proyecto{
+    color: rgb(255, 219, 16);
+    font-size: 18px;
+    
+    cursor: pointer;
+    transition: all 400ms;
+}
+.span-proyecto:hover{    
+    color:rgb(192, 164, 3);
+    border-bottom:1px solid rgb(192, 164, 3);    
+}
+.nombre-proyecto{
+    font-size: 18px;
+    color:rgb(192, 164, 3);
+    text-transform: uppercase;
+}
+
+/*****************************FIN PROYECTOS*************************/
+
+
+
+
+
+
+
+
+/*************************INICIO HISTORIA-USUARIO*********************/
+#container{        
+    display: flex;
+    position: absolute;
+    margin-top:50px;
+    margin-left: 400px;    
+    min-height: 700px;
+    width: 1200px;    
+    left: -90%;
+    display: block;
+    opacity: 0;
+}
+
+#container #form-historia{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-around;  
+    row-gap: 20px;
+}
+#container #form-historia div{
+    display: flex;
+    width: 100%;   
+}
+#container #form-historia input[type="text"],
+#container #form-historia input[type="number"],
+#container #form-historia input[type="date"]
+{
+     height: 18px;
+     width: 20%;
+}
+#container #form-historia input[type="text"],
+#container #form-historia input[type="number"],
+#container #form-historia input[type="date"],
+#container #form-historia textarea
+{
+    border-radius: 8px;
+    background-color: rgba(139, 139, 139, 0.3);
+    border: none;
+    outline: none;
+    margin: 4px;
+    color: rgb(148, 203, 253);    
+}
+#container #form-historia #historia-usuario{
+    width: 800px;
+}
+
+#container .div-historia{
+    flex-wrap: wrap;   
+    margin-left: 70px;
+}
+#container #form-historia .div-informacion{
+    position: relative;
+    margin-left: 60px;
+    min-height: 120px;        
+    display: flex;    
+    flex-wrap: wrap;
+    justify-content: space-around;
+    column-gap: 30%;
+}
+
+#container #form-historia .div-informacion label{
+    position: absolute;    
+}
+.lbl-numero{    
+    top: 4px;
+    left: 8px;
+}
+.lbl-1-1001{
+    top:4px;
+    left:330px;
+}
+.lbl-prioridad{
+    top: 4px;
+    left: 690px;
+}
+.lbl-1-1002{
+    top:4px;
+    left: 1070px;
+}
+.lbl-desarrollo{
+    top:64px;
+    left: 265px;
+}
+.dias-semanas{
+    position: absolute;
+    top:64px;
+    left: 690px;
+    width: 80px;
+    border: none;
+    outline: none;
+    background:rgba(139, 139, 139, 0.3);
+    color: rgb(148, 203, 253);
+    border-radius: 5px;
+}
+.dias-semanas option{
+    background:black;
+    color: white;
+}
+
+#container #form-historia .label-absolute{
+    position: absolute;
+    left: 100px;
+    
+}
+#container #form-historia .label-observaciones{
+    left: 85px;  
+}
+#container #form-historia .div-descripcion{
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+#container #form-historia .div-descripcion #descripcion{
+    width: 800px;
+    height: 200px;
+}
+#container #form-historia .div-observaciones{
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+#container #form-historia .div-observaciones #observaciones{
+    width: 800px;
+    height: 200px;
+}
+#container #form-historia  .crear{
+    justify-content: flex-end;
+    margin-right: 200px;   
+}
+#container #form-historia .crear input[type="submit"]{
+    padding: 7px;
+    width: 120px;
+}
+
+/*Mostrar historias de usuario*/
+#container-historiaU{
+    
+    display: flex;
+    margin: 70px auto;       
+    width: 1200px;
+    position: absolute;
+    flex-wrap: wrap;    
+    flex-direction: column;    
+    align-content: center;
+    row-gap: 80px;
+    transition: all 300ms;    
+    left: 20%; 
+    top: 100%;
+    opacity: 0;
+    display: none;
+    
+}
+
+#container-historiaU .div-mostrarHistoria{
+    min-width: 800px;
+    margin-top: 30px;
+    padding-left:130px;   
+    padding-right:130px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid rgba(0, 174, 255, 0.548);  
+
+    
+}
+#container-historiaU a .span-HistoriaU{
+    color: rgb(255, 255, 255);
+    font-size: 28px;
+    margin-left: 20%;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    word-spacing: 5px;        
+    transition: all 300ms;
+}
+#container-historiaU a:hover .span-HistoriaU{
+    color: rgb(255, 168, 6);
+    border-bottom: 1px solid rgb(255, 168, 6);
+        
+}
+.p-historia{
+    font-size: 20px;
+    text-transform: uppercase;
+    color:  rgb(13, 222, 250);
+    transition: all 300ms;
+}
+.span-contentHistoria{    
+    font-size: 16px;
+    font-family:"goudy old style";
+    color: rgb(204, 229, 246);
+    margin-left: 50px;
+    transition: all 300ms;
+}
+/*************************FIN HISTORIA-USUARIO*********************/
+
+
+
+/*************************INICIO TARJETAS CRC*********************/
+#container-crearCrc{    
+    position: absolute;
+    width: 100%;
+    left: -90%;
+    opacity: 0;
+    display: none;
+    transition: all 300ms;
+    
+}
+#container-crearCrc #form-crearCrc{
+    margin: auto;
+    width: 800px;
+    min-height: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 18px;  
+     
+    transition: all 300ms;
+}
+#form-crearCrc .crc-respoColabo{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    row-gap: 50px;
+    text-align: center;
+}
+.crc-respoColabo .crc-responsabilidad,
+.crc-respoColabo .crc-colaboracion
+{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+#container-crearCrc #form-crearCrc input[type="text"],
+#container-crearCrc #form-crearCrc input[type="number"]
+{
+    height: 16px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background: rgba(138, 138, 138, 0.472);
+    margin: 8px;
+    color: rgb(148, 203, 253);
+    font-size: 16px;
+    transition: all 300ms;
+
+}
+#form-crearCrc .crc-respoColabo textarea{
+    margin: 10px;
+    width: 350px;
+    height: 80px;
+    background: rgba(138, 138, 138, 0.472);    
+    color: rgb(148, 203, 253);
+    font-size: 16px;
+}
+#form-crearCrc input[type="submit"]{
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    padding: 7px;
+    width: 100px;
+    font-size: 15px;
+    background: rgb(59, 160, 255);
+    color: rgb(251, 251, 251);    
+    cursor: pointer;
+    transition: all 300ms;
+}
+#form-crearCrc input[type="submit"]:hover{
+    color: rgb(59, 160, 255);
+    background-color: rgb(251, 251, 251); 
+    font-size: 18px;
+}
+
+/*MOSTRAR TARJETAS CRC*/
+#container-mostrarCrc{
+    width: 100%; 
+    opacity: 0;
+    margin-top: 100%;
+    display: none;
+}
+#container-mostrarCrc .mostrarCrc{
+    margin: auto;
+    width: 500px;
+    margin-top: 50px;
+    padding-left:130px;   
+    padding-right:130px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid rgba(0, 174, 255, 0.548);  
+    
+}
+
+.mostrarCrc .clase-span{
+    color: rgb(255, 255, 255);
+    font-size: 28px;
+    margin-left: 28%;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    word-spacing: 8px;        
+    transition: all 300ms;
+}
+.mostrarCrc a:hover .clase-span{
+    color: rgb(255, 168, 6);
+    border-bottom: 1px solid rgb(255, 168, 6);
+        
+}
+.crc-p{
+    font-size: 20px;
+    text-transform: uppercase;
+    color:  rgb(13, 222, 250);
+    transition: all 300ms;
+}
+.crc-span{    
+    font-size: 16px;
+    font-family:"goudy old style";
+    color: rgb(204, 229, 246);
+    margin-left: 50px;
+    transition: all 300ms;
+}
+/*************************FIN TARJETAS CRC*********************/
+
+
+/*************************INICIO FINAL HISTORIAS DE USUARIO*********************/
+
+#crearHistoriaU{        
+    display: flex;
+    position: absolute;
+    padding: 20px;
+    margin-top:50px;
+    margin-left: 300px;    
+    min-height: 700px;
+    width: 1200px;   
+    transition: all 300ms;   
+   
+}
+
+#crearHistoriaU #form-historia{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-around;  
+    row-gap: 20px;
+    transition: all 300ms;   
+}
+#crearHistoriaU #form-historia div{
+    display: flex;
+    width: 100%;  
+    transition: all 300ms;    
+}
+#crearHistoriaU #form-historia input[type="text"],
+#crearHistoriaU #form-historia input[type="number"],
+#crearHistoriaU #form-historia input[type="date"]
+{
+     height: 18px;
+     width: 20%;
+}
+#crearHistoriaU #form-historia input[type="text"],
+#crearHistoriaU #form-historia input[type="number"],
+#crearHistoriaU #form-historia input[type="date"],
+#crearHistoriaU #form-historia textarea
+{
+    border-radius: 8px;
+    background-color: rgba(139, 139, 139, 0.3);
+    border: none;
+    outline: none;
+    margin: 4px;
+    color: rgb(148, 203, 253);    
+}
+#crearHistoriaU #form-historia #historia-usuario{
+    width: 800px;
+}
+
+#crearHistoriaU .div-historia{
+    flex-wrap: wrap;   
+    margin-left: 70px;
+}
+#crearHistoriaU #form-historia .div-informacion{
+    position: relative;
+    margin-left: 60px;
+    min-height: 120px;        
+    display: flex;    
+    flex-wrap: wrap;
+    justify-content: space-around;
+    column-gap: 30%;
+}
+
+#crearHistoriaU #form-historia .div-informacion label{
+    position: absolute;    
+}
+.lbl-numero{    
+    top: 4px;
+    left: 8px;
+}
+.lbl-1-1001{
+    top:4px;
+    left:330px;
+}
+.lbl-prioridad{
+    top: 4px;
+    left: 690px;
+}
+.lbl-1-1002{
+    top:4px;
+    left: 1070px;
+}
+.lbl-desarrollo{
+    top:64px;
+    left: 265px;
+}
+.dias-semanas{
+    position: absolute;
+    top:64px;
+    left: 690px;
+    width: 80px;
+    border: none;
+    outline: none;
+    background:rgba(139, 139, 139, 0.3);
+    color: rgb(148, 203, 253);
+    border-radius: 5px;
+}
+.dias-semanas option{
+    background:black;
+    color: white;
+}
+
+#crearHistoriaU #form-historia .label-absolute{
+    position: absolute;
+    left: 100px;
+    
+}
+#crearHistoriaU #form-historia .label-observaciones{
+    left: 85px;  
+}
+#crearHistoriaU #form-historia .div-descripcion{
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+#crearHistoriaU #form-historia .div-descripcion #descripcion{
+    width: 800px;
+    height: 200px;
+}
+#crearHistoriaU #form-historia .div-observaciones{
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+#crearHistoriaU #form-historia .div-observaciones #observaciones{
+    width: 800px;
+    height: 200px;
+}
+#crearHistoriaU #form-historia  #btn-modificar{
+   
+    margin-left: 800px;   
+}
+#crearHistoriaU #form-historia #btn-modificar{
+    padding: 7px;
+    width: 120px;
+    border: none;
+    outline: none;
+    background: rgba(255, 255, 255, 0.4);
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 500ms;   
+    transition: background 800ms;
+}
+#crearHistoriaU #form-historia #btn-modificar:hover{
+    border: 1px solid red;
+    background: rgba(255, 255, 255, 0.0);
+    color: red;
+
+}
+/*************************FIN FINAL HISTORIAS DE USUARIO*********************/
+
+
+#containerCrc{    
+    position: absolute;
+    width: 100%;
+    
+    transition: all 300ms;
+    
+}
+#containerCrc #form-crearCrc{
+    margin: auto;
+    width: 800px;
+    min-height: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 18px;  
+     
+    transition: all 300ms;
+}
+#form-crearCrc .crc-respoColabo{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    row-gap: 50px;
+    text-align: center;
+}
+.crc-respoColabo .crc-responsabilidad,
+.crc-respoColabo .crc-colaboracion
+{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+#containerCrc #form-crearCrc input[type="text"],
+#containerCrc #form-crearCrc input[type="number"]
+{
+    height: 16px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background: rgba(138, 138, 138, 0.472);
+    margin: 8px;
+    color: rgb(148, 203, 253);
+    font-size: 16px;
+    transition: all 300ms;
+
+}
+#form-crearCrc .crc-respoColabo textarea{
+    margin: 10px;
+    width: 350px;
+    height: 80px;
+    background: rgba(138, 138, 138, 0.472);    
+    color: rgb(148, 203, 253);
+    font-size: 16px;
+}
+#form-crearCrc input[type="submit"]{
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    padding: 7px;
+    width: 100px;
+    font-size: 15px;
+    background: rgb(59, 160, 255);
+    color: rgb(251, 251, 251);    
+    cursor: pointer;
+    transition: all 300ms;
+}
+#form-crearCrc input[type="submit"]:hover{
+    color: rgb(59, 160, 255);
+    background-color: rgb(251, 251, 251); 
+    font-size: 18px;
+}

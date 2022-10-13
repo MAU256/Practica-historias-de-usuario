@@ -1,0 +1,157 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    
+}
+a{
+    text-decoration:none;
+}
+
+/*****************************INICIO FOOTER*************************/
+#footer{    
+    width: auto;
+    height: 400px;
+    padding-top: 10px;
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+#footer h1{    
+    color: white;    
+       
+}
+#btn-posicion{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;    
+    margin-top: -100px;
+    margin-bottom: 100px;
+    column-gap: 70px;        
+    border: solid 1px rgb(0, 0, 0);
+}
+#btn-posicion button{
+    padding: 10px;
+    border-radius: 100px;
+    border: none;
+    outline: none;
+    font-size: 15px;    
+    background-color: rgb(75, 189, 235);
+    color: white;
+    cursor: pointer;
+    transition: all 300ms;
+}
+#btn-posicion button:hover{
+    background-color: white;
+    color: rgb(75, 189, 235);
+}
+/*****************************FIN INDEX*************************/
+
+
+/*****************************INICIO SECTTION*************************/
+#section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    transition: all 300ms;
+    
+}
+
+#section div{
+    top: -81px;
+    position: absolute;
+    transition: all 300ms;
+    
+}
+#section div form{
+    display: flex;    
+    flex-direction: column;    
+    background-color: rgb(189, 1, 1);
+    border-radius: 20px;
+    width: 500px;    
+    row-gap: 30px;
+    align-items: center; 
+    transition: all 300ms;   
+    
+
+}
+#section div form input[type="text"],
+#section div form input[type="password"]{
+    width: 70%;
+    margin-left: 20px;
+    height: 25px;    
+    border-radius: 5px;
+    background-color: rgb(211, 211, 211);
+    outline: none;
+    border: none;
+    transition: all 300ms;
+    
+}
+#section div form input[type="submit"]{
+    padding: 8px;
+    width: 100px;
+    font-size: 15px;
+    border-radius: 10px;
+    background-color: rgb(90, 161, 253);
+    color: white;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all 300ms;
+    
+}
+/*****************************INICIO CREAR CUENTA*************************/
+#section div form input[type="text"]:first-child
+{
+    margin-top: 120px;
+    
+}
+.span-crearCuenta{
+    position: absolute;
+    left: 29%;
+    top: 50px;
+    color: white;
+    font-size: 30px;
+}
+#crear-cuenta{   
+    left: 780px;
+    transition: all 300ms;
+    display: none;
+}
+#crear-cuenta form{
+    height: 450px;
+    
+}
+/*****************************FIN CREAR CUENTA*************************/
+
+
+/*****************************INICIO INICIAR SESION*************************/
+.span-iniciarSesion{
+    position: absolute;
+    left: 29%;
+    top: 50px;
+    color: white;
+    font-size: 30px;
+}
+#iniciar-sesion{    
+    left: 32%;    
+    transition: all 300ms;   
+}
+#iniciar-sesion form{
+    height: 350px;      
+}
+.span-error{
+    color:white;
+    display:block;
+    margin-top: 10px;
+}
+/*****************************FIN INICIAR SESION*************************/
+
+
+
+/*****************************FIN SECTION*************************/
+/*#section div #form-crear{height: 400px;}*/
+
+/*#section #form-crear form>div{}*/
+
+
